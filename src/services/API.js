@@ -72,7 +72,7 @@ export const getMoviesInGenre = async ({ id, page }) => {
 };
 
 // Get search result and paginate it
-export const getSearchResult = async ({ query, page }) => {
+export const getSearchResult = async (query, page) => {
   return await getWithATR(
     `/search/multi/${apiKey}&query=${query}&page=${page}`
   );
