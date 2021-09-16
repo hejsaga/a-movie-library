@@ -1,0 +1,129 @@
+.mobileNavbar {
+  text-align: right;
+  top: 0;
+  z-index: 200;
+  width: 100vw;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.591), transparent);
+}
+
+.mobileNavbar ul {
+  margin-top: 0;
+}
+
+.burgerIcon {
+  color: white;
+  background-color: transparent;
+  font-size: 1.8em;
+  border: none;
+  margin: 0.4em;
+}
+
+.burgerIcon svg {
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+
+.mobileMenu {
+  text-align: left;
+  padding: 1em;
+  height: 100vh;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.mobileMenu a {
+  font-size: 1.2em;
+  color: white;
+  text-shadow: 1px 8px 5px black;
+  text-decoration: none;
+  padding-bottom: 1em;
+}
+
+.mobileSearch {
+  display: flex;
+  align-items: center;
+}
+
+.mobileSearch input {
+  color: white;
+  border: 1px solid white;
+  background-color: #181818;
+  border-radius: 5px;
+  height: 40px;
+  width: 220px;
+  padding-left: 1em;
+  font-family: "Montserrat", sans-serif;
+}
+
+.mobileSearch button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 2.2em;
+  margin-left: 0.3em;
+  padding-top: 0.2em;
+}
+
+/* DESKTOP STYLES */
+
+.container {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.988), transparent);
+  display: flex;
+  align-items: center;
+  padding-top: 2.5em;
+  width: 100%;
+  margin-bottom: 2em;
+  z-index: 1;
+}
+
+.container ul {
+  width: 100%;
+  text-align: left;
+  align-items: center;
+}
+
+.container a {
+  padding: 0.5em;
+  font-size: 1.3em;
+  font-weight: 1000;
+  text-decoration: none;
+  color: white;
+  text-shadow: 1px 5px 5px black;
+}
+
+/* .searchFieldContainer {
+  float: right;
+  margin-right: 4em;
+  display: flex;
+  align-items: center;
+} */
+
+.searchFieldContainer input {
+  border-radius: 5px;
+  height: 25px;
+  width: 10em;
+  margin-right: 0.6em;
+  color: white;
+  border: 1px solid white;
+  background-color: #1818185f;
+  font-size: 1.2em;
+  padding-left: 0.8em;
+}
+
+.searchButton {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.searchButton button {
+  margin-left: 1em;
+  margin: 0;
+}
+
+.searchButton button:hover {
+  cursor: pointer;
+}

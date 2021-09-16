@@ -1,0 +1,68 @@
+/* the main container */
+.carouselContainer {
+  margin-bottom: 2.5em;
+}
+
+/* rules for images */
+.carouselContainer img,
+.actorCarouselContainer img {
+  margin: 0em 1.2em;
+  border-radius: 8px;
+  min-width: 140px;
+  max-width: 140px;
+  min-height: 220px;
+  max-height: 220px;
+}
+/* .carouselContainer img,
+  .actorCarouselContainer img {
+    margin: 0 auto;
+    border-radius: 8px;
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 375px;
+    max-height: 375px;
+  } */
+
+.carouselContainer img:hover,
+.actorCarouselContainer img:hover {
+  cursor: pointer;
+}
+
+.react-multiple-carousel__arrow {
+  top: 40%;
+}
+
+.actorName {
+  font-size: 0.7em;
+  padding-top: 1em;
+  padding-left: 2em;
+  margin: 0em 1.2em;
+}
+
+/* TABLET SCREENS */
+@media (min-width: 700px) {
+  .listHeadline {
+    text-align: left;
+    margin-left: 1.6em;
+    margin-bottom: 1.5em;
+    font-size: 1.6em;
+  }
+
+  .carouselContainer img,
+  .actorCarouselContainer img {
+    margin: 0 auto;
+    border-radius: 8px;
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 375px;
+    max-height: 375px;
+  }
+}
+
+/* DESKTOP SCREENS */
+@media (min-width: 1800px) {
+  .carouselContainer img,
+  .actorCarouselContainer img {
+    width: 320px;
+  }
+}

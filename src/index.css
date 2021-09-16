@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Karla", sans-serif;
+  /* font-family: "Montserrat", sans-serif; */
+  background-color: #181818;
+  color: white;
+  text-shadow: 1px 5px 5px black;
+}
+
+/* page wrapper */
+/* .wrapper {
+  margin: 0em 2em 3em 1.4em;
+  text-align: center;
+} */
+
+.wrapper h1 {
+  font-size: 1.4em;
+  margin: 0em 0em 1em 0em;
+  text-align: center;
+}
+
+/* loading spinner */
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchField {
+  font-family: "Karla", sans-serif;
+  width: 15em;
+  height: 2em;
+  padding-left: 0.6em;
+  border-radius: 8px;
+}
+
+.searchButton {
+  background-color: transparent;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.2em;
+  border: none;
+  box-shadow: 1px 3px 10px rgb(12, 12, 12);
+  margin-left: 1em;
+}
+
+.searchButton:hover {
+  cursor: pointer;
+}
+
+/* headline before carousel on home */
+.listHeadline {
+  text-align: left;
+  margin-left: 1.2em;
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+.listHeadline:first-child {
+  margin-top: 3em;
+}
+
+/* extra margin because of actor name on detail page */
+/* .lastViewed {
+  margin-top: 3em;
+} */
+
+/* the container of movies on genre and search page */
+.movieContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.movieContainer div {
+  padding: 1em;
+}
+
+.movieContainer img {
+  min-width: 250px;
+  max-width: 250px;
+  min-height: 375px;
+  max-height: 375px;
+}
+
+.movieContainer img:hover {
+  cursor: pointer;
+}
+
+/* title on genre page  */
+.movieTitle {
+  font-size: 1em;
+  width: 12em;
+}
+
+img {
+  box-shadow: 1px 2px 5px black;
+}
+
+.goBackButton {
+  border-radius: 6px;
+  width: 1.5em;
+  margin: 1em;
+  background-color: rgb(31, 31, 31);
+  color: white;
+}
+
+/* TABLET SCREENS */
+@media (min-width: 700px) {
+  .listHeadline {
+    text-align: left;
+    margin-left: 1.6em;
+    margin-bottom: 1.5em;
+    font-size: 1.6em;
+  }
+
+  .searchField {
+    width: 35em;
+    height: 3em;
+    padding-left: 1em;
+  }
+
+  .searchButton {
+    font-size: 1.8em;
+  }
+
+  .queryResult {
+    font-size: 2em;
+  }
+}
+
+/* LAPTOP SCREENS */
+@media (min-width: 1100px) {
+  .nowPlaying {
+    margin-top: 4em;
+  }
+}

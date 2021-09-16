@@ -1,0 +1,38 @@
+.wrapper {
+  margin: 0em 2em 3em 1.4em;
+}
+
+.container {
+  padding: 0.5em;
+  text-align: left;
+  margin-left: 1em;
+}
+
+.headline {
+  font-size: 1.4em;
+  margin-top: 0;
+  text-align: left;
+  /* margin-left: 1em; */
+}
+
+.container a {
+  text-decoration: none;
+  color: white;
+}
+
+.container a:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 700px) {
+  .headline {
+    margin-left: 2.5em;
+    margin-bottom: 1.8em;
+  }
+  .container {
+    display: flex;
+    padding-bottom: 0.2em;
+    margin-left: 2.8em;
+    font-size: 1.2em;
+  }
+}

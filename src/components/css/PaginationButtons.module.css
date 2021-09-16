@@ -1,0 +1,21 @@
+.paginationButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paginationButtons button {
+  border-radius: 6px;
+  width: 1.5em;
+  margin: 1em;
+  background-color: rgb(31, 31, 31);
+  color: white;
+}
+
+.paginationButtons button:disabled {
+  color: rgb(101, 101, 101);
+}
+
+.paginationButtons button:hover {
+  cursor: pointer;
+}
