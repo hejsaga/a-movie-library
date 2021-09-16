@@ -3,7 +3,6 @@ import { Link, useHistory, useLocation } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import styles from "../css/Navbar.module.css";
 import useScrollBlock from "../../hooks/useScrollBlock";
-import SearchBar from "./SearchBar";
 
 function NavbarMobile() {
   const location = useLocation();
@@ -27,7 +26,7 @@ function NavbarMobile() {
   };
 
   const menu = (
-    <ul className={styles.mobileMenu}>
+    <ul className={styles.mobileMenu} onClick={() => toggleOnClick()}>
       <div className={styles.links}>
         <Link to="/">Home</Link>
         <Link to="/trending">Trending</Link>
@@ -35,7 +34,6 @@ function NavbarMobile() {
         <Link to="/genres">Browse all genres</Link>
         <Link to="/search">Search and filters</Link>
       </div>
-      <SearchBar />
     </ul>
   );
 
