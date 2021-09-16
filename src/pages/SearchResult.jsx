@@ -37,21 +37,6 @@ function SearchResult() {
     <div className="wrapper">
       <h1>Search</h1>
 
-      <div className="searchContainer">
-        <input
-          className="searchField"
-          placeholder="Search for movies or actors"
-          type="text"
-          onChange={(e) => {
-            handleChange(e);
-          }}
-        ></input>
-
-        <button className="searchButton" onClick={() => handleSearch()}>
-          <FaSearch />
-        </button>
-      </div>
-
       {data && <p className="queryResult">Results for {searchParams.query}</p>}
 
       {isLoading && <p>Loading...</p>}

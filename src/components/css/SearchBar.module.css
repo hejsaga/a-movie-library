@@ -1,0 +1,43 @@
+.searchContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchField {
+  font-family: "Karla", sans-serif;
+  width: 15em;
+  height: 2em;
+  padding-left: 0.6em;
+  border-radius: 8px;
+}
+
+.searchButton {
+  background-color: transparent;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.2em;
+  border: none;
+  box-shadow: 1px 3px 10px rgb(12, 12, 12);
+  margin-left: 1em;
+}
+
+.searchButton:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 700px) {
+  .searchField {
+    width: 35em;
+    height: 3em;
+    padding-left: 1em;
+  }
+
+  .searchButton {
+    font-size: 1.8em;
+  }
+
+  .queryResult {
+    font-size: 2em;
+  }
+}
