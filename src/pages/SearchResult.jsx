@@ -5,7 +5,7 @@ import useSearchParams from "../hooks/useSeachParams";
 import { FaSearch } from "react-icons/fa";
 
 function SearchResult() {
-  const [searchQuery, setSearchQuery] = useState("");
+  /* const [searchQuery, setSearchQuery] = useState("");
   const [
     page,
     setPage,
@@ -31,13 +31,13 @@ function SearchResult() {
   useEffect(() => {
     // Trigger a refetch when page changes, because useQuery is disabled at first
     setSearchParams({ ...searchParams, page, query: searchQuery });
-  }, [page]);
+  }, [page]); */
 
   return (
     <div className="wrapper">
       <h1>Search</h1>
 
-      {data && <p className="queryResult">Results for {searchParams.query}</p>}
+      {/* {data && <p className="queryResult">Results for {searchParams.query}</p>}
 
       {isLoading && <p>Loading...</p>}
       {isError && <p>An error occured: {error.message}</p>}
@@ -63,7 +63,7 @@ function SearchResult() {
             />
           )}
         </>
-      )}
+      )} */}
     </div>
   );
 }
