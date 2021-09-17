@@ -65,14 +65,14 @@ export const getGenres = async (id) => {
 };
 
 // Get movies from genre id
-export const getMoviesInGenre = async ({ id, page }) => {
+export const getMoviesInGenre = async (id, page) => {
   return await getWithATR(
     `/discover/movie/${apiKey}&with_genres=${id}&page=${page}`
   );
 };
 
 // Get search result and paginate it
-export const getSearchResult = async ({ query, page }) => {
+export const getSearchResult = async (query, page) => {
   return await getWithATR(
     `/search/multi/${apiKey}&query=${query}&page=${page}`
   );

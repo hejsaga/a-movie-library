@@ -1,27 +1,27 @@
 import React from "react";
 import styles from "../css/PaginationButtons.module.css";
 
-function PaginationButtons({ totalPages, page, setPage }) {
+function PaginationButtons({ totalPages, page, setQuery }) {
+  const getPrevPage = () => {
+    setQuery({ page: page - 1 });
+  };
+
+  const getNextPage = () => {
+    if (page < totalPages) {
+      setQuery({ page: page + 1 });
+    }
+  };
+
   return (
     <div className="pagination">
       <div className={styles.paginationButtons}>
-        <button
-          onClick={() => setPage((current) => Math.max(current - 1, 1))}
-          disabled={page === 1}
-        >
+        <button onClick={() => getPrevPage()} disabled={page === 1}>
           &#10094;
         </button>
 
         <p>Page: {page}</p>
 
-        <button
-          onClick={() => {
-            if (page < totalPages) {
-              setPage((page) => page + 1);
-            }
-          }}
-          disabled={page >= totalPages}
-        >
+        <button onClick={() => getNextPage()} disabled={page >= totalPages}>
           &#10095;
         </button>
       </div>

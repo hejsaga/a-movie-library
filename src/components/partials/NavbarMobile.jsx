@@ -26,8 +26,8 @@ function NavbarMobile() {
   };
 
   const menu = (
-    <ul className={styles.mobileMenu}>
-      <div className={styles.links} onClick={() => toggleOnClick()}>
+    <ul className={styles.mobileMenu} onClick={() => toggleOnClick()}>
+      <div className={styles.links}>
         <Link to="/">Home</Link>
         <Link to="/trending">Trending</Link>
         <Link to="/toprated">Top rated</Link>
