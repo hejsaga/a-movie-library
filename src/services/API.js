@@ -65,7 +65,7 @@ export const getGenres = async (id) => {
 };
 
 // Get movies from genre id
-export const getMoviesInGenre = async ({ id, page }) => {
+export const getMoviesInGenre = async (id, page) => {
   return await getWithATR(
     `/discover/movie/${apiKey}&with_genres=${id}&page=${page}`
   );
