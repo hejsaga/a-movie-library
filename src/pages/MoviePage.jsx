@@ -52,14 +52,20 @@ function Movie() {
       ) : (
         <>
           {data && (
-            <div className={styles.container}>
-              <h1>{data.title}</h1>
-              <h2>{data.tagline}</h2>
-              <div className={styles.imageContainer}>
-                <img src={imgPrefix + data.poster_path}></img>
+            <>
+              <div className={styles.container}>
+                <h1>{data.title}</h1>
+                <h2>{data.tagline}</h2>
+
+                <div className={styles.imageContainer}>
+                  <img src={imgPrefix + data.poster_path}></img>´{" "}
+                </div>
+
+                <p>{data.overview}</p>
+                <p className={styles.vote}>Rating: {data.vote_average}</p>
+                <p>Runtime: {data.runtime} min</p>
               </div>
-              <p>{data.overview}</p>
-            </div>
+            </>
           )}
 
           <SimilarMovies />

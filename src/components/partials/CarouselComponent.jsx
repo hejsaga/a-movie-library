@@ -10,8 +10,13 @@ function CarouselComponent({ movies }) {
 
   // Config for breakpoints in carousel
   const responsive = {
+    bigScreen: {
+      breakpoint: { max: 3000, min: 2200 },
+      items: 7,
+      slidesToSlide: 7,
+    },
     desktop: {
-      breakpoint: { max: 3000, min: 1800 },
+      breakpoint: { max: 2200, min: 1800 },
       items: 6,
       slidesToSlide: 6,
     },
