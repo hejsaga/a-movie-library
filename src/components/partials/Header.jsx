@@ -5,10 +5,11 @@ import { getNowPlaying } from "../../services/API";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import styles from "../css/Header.module.css";
+import HeaderImage from "./HeaderImage";
 
 function Header() {
   const history = useHistory();
-  const imgPrefix = "https://image.tmdb.org/t/p/w1280";
+
   const { data, error, isError, isLoading } = useQuery(["now-playing"], () => {
     return getNowPlaying();
   });
@@ -20,7 +21,6 @@ function Header() {
       items: 1,
       slidesToSlide: 1,
     },
-    // Needed even with same config so that carousel can show header on mobile device, for a yet unknown reason
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 1,
@@ -54,13 +54,7 @@ function Header() {
                   <h1>{movie.title}</h1>
                 </div>
 
-                <div className={styles.carouselContainerHeader}>
-                  <img
-                    onClick={() => goToMovie(movie.id)}
-                    className={styles.backdropImg}
-                    src={imgPrefix + movie.backdrop_path}
-                  ></img>
-                </div>
+                <HeaderImage image={movie.backdrop_path} />
               </div>
             );
           })}
