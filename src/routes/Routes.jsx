@@ -20,15 +20,11 @@ function Routes() {
           <HomePage />
         </Route>
 
-        {/* <Route exact path="/movies/:id">
-          <MoviePage />
-        </Route> */}
-
         <Route exact path="/genres">
           <CategoryPage />
         </Route>
 
-        <Route exact path="/genres/:name/:id/">
+        <Route path="/genres/:name/:id">
           <Category />
         </Route>
 

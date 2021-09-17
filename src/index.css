@@ -1,21 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap");
 
 body {
   margin: 0;
   font-family: "Karla", sans-serif;
-  /* font-family: "Montserrat", sans-serif; */
   background-color: #181818;
   color: white;
   text-shadow: 1px 5px 5px black;
 }
-
-/* page wrapper */
-/* .wrapper {
-  margin: 0em 2em 3em 1.4em;
-  text-align: center;
-} */
 
 .wrapper h1 {
   font-size: 1.4em;
@@ -23,39 +14,13 @@ body {
   text-align: center;
 }
 
+.home {
+  margin-bottom: 1em;
+}
+
 /* loading spinner */
 .spinner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.searchContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.searchField {
-  font-family: "Karla", sans-serif;
-  width: 15em;
-  height: 2em;
-  padding-left: 0.6em;
-  border-radius: 8px;
-}
-
-.searchButton {
-  background-color: transparent;
-  border-radius: 8px;
-  color: white;
-  font-size: 1.2em;
-  border: none;
-  box-shadow: 1px 3px 10px rgb(12, 12, 12);
-  margin-left: 1em;
-}
-
-.searchButton:hover {
-  cursor: pointer;
+  margin-top: 4em;
 }
 
 /* headline before carousel on home */
@@ -70,11 +35,6 @@ body {
   margin-top: 3em;
 }
 
-/* extra margin because of actor name on detail page */
-/* .lastViewed {
-  margin-top: 3em;
-} */
-
 /* the container of movies on genre and search page */
 .movieContainer {
   display: flex;
@@ -82,6 +42,7 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
+  max-width: 90em;
 }
 
 .movieContainer div {
@@ -126,18 +87,8 @@ img {
     font-size: 1.6em;
   }
 
-  .searchField {
-    width: 35em;
-    height: 3em;
-    padding-left: 1em;
-  }
-
-  .searchButton {
-    font-size: 1.8em;
-  }
-
-  .queryResult {
-    font-size: 2em;
+  .home {
+    margin-bottom: 4em;
   }
 }
 

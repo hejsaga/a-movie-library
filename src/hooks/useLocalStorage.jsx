@@ -26,7 +26,6 @@ function useLocalStorage(key, initialValue) {
       // Save to local storage
       window.localStorage.setItem(key, JSON.stringify(valueToStore));
     } catch (error) {
-      // If error, implement error handling here
       console.log(error);
     }
   };
