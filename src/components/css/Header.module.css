@@ -27,7 +27,6 @@
 
 /* title on top of header */
 .headerMovieTitle {
-  /* font-family: "Montserrat", sans-serif; */
   position: absolute;
   z-index: 2;
   bottom: 0;
@@ -43,7 +42,6 @@
   .overlay {
     height: 50vh;
     z-index: 4;
-    background: linear-gradient(to top, red, rgba(255, 0, 0, 0));
   }
 
   .backdropImg {
@@ -58,7 +56,6 @@
   .overlay {
     height: 70vh;
     z-index: 4;
-    background: linear-gradient(to top, red, rgba(255, 0, 0, 0));
   }
 
   .backdropImg {

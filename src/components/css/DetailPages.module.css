@@ -1,11 +1,10 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  /* margin: 0em 1.4em 3em 1.4em; */
 }
 
 .container {
-  /* margin: 0em 0.2em 3em 0.2em; */
+  margin: 0em 0.2em 3em 0.2em;
 }
 
 .container h1 {
@@ -24,25 +23,35 @@
   border-radius: 8px;
 }
 
+.imageContainer img {
+  border-radius: 8px;
+}
+
 @media (min-width: 700px) {
   .wrapper {
     margin-bottom: 5em;
   }
 
   .container {
-    margin: 0em 25em 4em 25em;
+    margin: 0em 0.2em 3em 0.2em;
   }
 
   .container h1 {
-    font-size: 2.5em;
+    font-size: 2.2em;
   }
 
   .container h2 {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 
   .container img {
     height: 600px;
     width: 400px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .container p {
+    margin: 1em 18em 1em 18em;
   }
 }
