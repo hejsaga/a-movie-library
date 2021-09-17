@@ -42,13 +42,13 @@ function Header() {
         >
           {data.results.map((movie, i) => {
             return (
-              <>
-                <div key={i} className={styles.headerMovieTitle}>
+              <div key={i}>
+                <div className={styles.headerMovieTitle}>
                   <h1>{movie.title}</h1>
                 </div>
 
                 <HeaderImage image={movie.backdrop_path} movieId={movie.id} />
-              </>
+              </div>
             );
           })}
         </Carousel>

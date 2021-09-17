@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { useUrlSearchParams } from "use-url-search-params";
 import { NumberParam, useQueryParams } from "use-query-params";
 import { getMoviesInGenre } from "../services/API";
 import { useParams } from "react-router-dom";
