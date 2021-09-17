@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
 import { Link, useLocation } from "react-router-dom";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { FiMenu } from "react-icons/fi";
 import styles from "../css/Navbar.module.css";
 
 function NavbarMobile() {
@@ -64,7 +64,7 @@ function NavbarMobile() {
         style={navStyle ? navbarPosition : null}
       >
         <button onClick={() => toggleOnClick()} className={styles.burgerIcon}>
-          <GiHamburgerMenu />
+          <FiMenu />
         </button>
 
         {toggleMenu ? menu : ""}
