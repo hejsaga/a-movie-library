@@ -9,8 +9,15 @@ function NavbarMobile() {
   const [toggleMenu, setToggleMenu] = useState(false);
   const [navStyle, setNavStyle] = useState(false);
   const [blockScroll, allowScroll] = useScrollBlock();
+
   const navbarPosition = {
+    // When menu is open, position it absolute
     position: "absolute",
+  };
+  const navbarBackground = {
+    // When menu is open, give it a background color
+    height: "100vh",
+    background: "#181818;",
   };
 
   useEffect(() => {
@@ -38,11 +45,10 @@ function NavbarMobile() {
   );
 
   return (
-    <div>
+    <div style={toggleMenu ? navbarBackground : null}>
       <div
         className={styles.mobileNavbar}
         style={navStyle ? navbarPosition : null}
-        /* style={toggleMenu ? dropDownBackground : null} */
       >
         <button onClick={() => toggleOnClick()} className={styles.burgerIcon}>
           <GiHamburgerMenu />
