@@ -59,7 +59,7 @@ function SearchResult() {
         ></input>
       </div>
 
-      {data && <p className="queryResult">Results for {query.query}</p>}
+      {data && <p className={styles.queryResult}>Results for {query.query}</p>}
 
       {isLoading && <p>Loading...</p>}
       {isError && <p>An error occured: {error.message}</p>}

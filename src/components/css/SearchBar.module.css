@@ -5,11 +5,14 @@
 }
 
 .searchField {
-  font-family: "Karla", sans-serif;
-  width: 15em;
-  height: 2em;
-  padding-left: 0.6em;
+  color: white;
+  background-color: #181818;
+  border: 1.2px solid white;
   border-radius: 8px;
+  font-family: "Karla", sans-serif;
+  width: 18em;
+  height: 2.2em;
+  padding-left: 0.6em;
 }
 
 .searchButton {
@@ -31,6 +34,7 @@
     width: 35em;
     height: 3em;
     padding-left: 1em;
+    font-size: 1em;
   }
 
   .searchButton {
@@ -38,6 +42,6 @@
   }
 
   .queryResult {
-    font-size: 2em;
+    font-size: 1.8em;
   }
 }
