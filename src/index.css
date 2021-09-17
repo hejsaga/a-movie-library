@@ -1,21 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap");
 
 body {
   margin: 0;
   font-family: "Karla", sans-serif;
-  /* font-family: "Montserrat", sans-serif; */
   background-color: #181818;
   color: white;
   text-shadow: 1px 5px 5px black;
 }
-
-/* page wrapper */
-/* .wrapper {
-  margin: 0em 2em 3em 1.4em;
-  text-align: center;
-} */
 
 .wrapper h1 {
   font-size: 1.4em;
@@ -23,11 +14,13 @@ body {
   text-align: center;
 }
 
+.home {
+  margin-bottom: 4em;
+}
+
 /* loading spinner */
 .spinner {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 4em;
 }
 
 /* headline before carousel on home */
@@ -41,11 +34,6 @@ body {
 .listHeadline:first-child {
   margin-top: 3em;
 }
-
-/* extra margin because of actor name on detail page */
-/* .lastViewed {
-  margin-top: 3em;
-} */
 
 /* the container of movies on genre and search page */
 .movieContainer {
