@@ -24,11 +24,18 @@ function Category() {
     ["genre", id, query.page],
     () => {
       return getMoviesInGenre(id, query.page);
+    },
+    {
+      enabled: false,
     }
   );
 
   useEffect(() => {
-    setQuery({ ...query, page: query.page });
+    // When query page is set to 1 or other change in page is detected, fetch data
+    if (query.page) {
+      setQuery({ ...query, page: query.page });
+      refetch && refetch();
+    }
   }, [query.page]);
 
   return (
