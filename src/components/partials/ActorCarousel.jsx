@@ -10,6 +10,11 @@ function ActorCarousel({ actors }) {
 
   // Config for breakpoints in carousel
   const responsive = {
+    bigScreen: {
+      breakpoint: { max: 3000, min: 2200 },
+      items: 7,
+      slidesToSlide: 7,
+    },
     desktop: {
       breakpoint: { max: 3000, min: 1800 },
       items: 6,
