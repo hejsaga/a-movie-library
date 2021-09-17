@@ -21,7 +21,7 @@ function NavbarMobile() {
   };
 
   useEffect(() => {
-    // If menu is open, prevent body scroll w/ exception for on the dropdown menu.
+    // If menu is open, prevent body scroll w/ exception for in the dropdown menu.
     if (toggleMenu) {
       disableBodyScroll(dropdown);
     } else {

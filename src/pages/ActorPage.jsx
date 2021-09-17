@@ -20,7 +20,7 @@ function ActorPage() {
   );
 
   return (
-    <div /* className="wrapper" */>
+    <>
       {isLoading && <p>Loading...</p>}
       {isError && <p>An error occured: {error.message}</p>}
 
@@ -28,10 +28,6 @@ function ActorPage() {
         <Spinner />
       ) : (
         <>
-          {/* <button className="goBackButton" onClick={() => history.goBack()}>
-            <BiArrowBack />
-          </button> */}
-
           {data && (
             <div className={styles.container}>
               <h1>{data.name}</h1>
@@ -43,7 +39,7 @@ function ActorPage() {
           <ActorMovies />
         </>
       )}
-    </div>
+    </>
   );
 }
 

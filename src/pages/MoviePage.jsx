@@ -9,6 +9,7 @@ import Actors from "../components/Actors";
 import Spinner from "../components/partials/Spinner";
 import styles from "../components/css/DetailPages.module.css";
 
+// API return error to console for non existing images with GET https://image.tmdb.org/t/p/w300null 404, it's made like that by design. It's common on this page.
 function Movie() {
   const { id } = useParams();
   const imgPrefix = "https://image.tmdb.org/t/p/w300";
@@ -62,8 +63,8 @@ function Movie() {
                 </div>
 
                 <p>{data.overview}</p>
-                <p className={styles.vote}>Rating: {data.vote_average}</p>
                 <p>Runtime: {data.runtime} min</p>
+                <p className={styles.vote}>Rating: {data.vote_average}</p>
               </div>
             </>
           )}

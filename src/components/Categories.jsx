@@ -5,7 +5,6 @@ import { useHistory } from "react-router-dom";
 import styles from "./css/Categories.module.css";
 
 // For future reference: This component could be a drowdown menu from navbar or something other cool instead of a list.
-
 function Categories() {
   const history = useHistory();
   const { data, error, isError, isLoading } = useQuery(["genres"], () => {

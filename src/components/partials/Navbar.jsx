@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Link, useLocation, useHistory } from "react-router-dom";
-import { MdSearch } from "react-icons/md";
+import { Link, useLocation } from "react-router-dom";
 import styles from "../css/Navbar.module.css";
 
 function Navbar() {
-  const history = useHistory();
-  const [searchString, setSearchString] = useState();
   const [navStyle, setNavStyle] = useState(false);
   const location = useLocation();
   const navbarPosition = {
@@ -33,10 +30,6 @@ function Navbar() {
           <Link to="/toprated">Top rated</Link>
           <Link to="/genres">Browse all genres</Link>
           <Link to="/search">Search</Link>
-
-          {/* <div className={styles.searchFieldContainer}>
-            
-          </div> */}
         </ul>
       </div>
     </div>

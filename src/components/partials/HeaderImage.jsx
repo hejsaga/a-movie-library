@@ -14,7 +14,7 @@ function HeaderImage({ image, movieId }) {
     <div
       onClick={() => goToMovie()}
       className={styles.backgroundImageContainer}
-      // Using inline styles to access the background image fetched from api.
+      // Using inline styles to access image fetched from api tp use as background.
       // For future reference: Put gradient first so it's at the top of div-stack.
       style={{
         background: `linear-gradient(to top, #181818, rgba(255, 0, 0, 0)), url(${
