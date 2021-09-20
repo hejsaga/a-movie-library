@@ -1,10 +1,8 @@
 import React from "react";
-import Slider from "react-slick";
 import { useHistory } from "react-router-dom";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import styles from "../css/Carousel.module.css";
 import CarouselArrow from "../CarouselArrow";
+import Slider from "react-slick";
+import styles from "../css/Carousel.module.css";
 
 function ReactCarousel({ movies }) {
   const history = useHistory();
@@ -14,6 +12,7 @@ function ReactCarousel({ movies }) {
     history.push(`/movies/${id}`);
   };
 
+  // Config and breakpoints for carousel
   var settings = {
     dots: true,
     autoplay: false,
