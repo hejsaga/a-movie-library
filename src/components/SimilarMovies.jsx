@@ -2,7 +2,7 @@ import React from "react";
 import { getSimilarMovies } from "../services/API";
 import { useParams } from "react-router-dom";
 import { useQuery } from "react-query";
-import CarouselComponent from "./partials/CarouselComponent";
+import MovieCarousel from "./partials/MovieCarousel";
 
 function SimilarMovies() {
   const { id } = useParams();
@@ -16,7 +16,7 @@ function SimilarMovies() {
       {isLoading && <p>Loading...</p>}
       {isError && <p>An error occured: {error.message}</p>}
 
-      {data && <CarouselComponent movies={data.results} />}
+      {data && <MovieCarousel movies={data.results} />}
     </>
   );
 }
