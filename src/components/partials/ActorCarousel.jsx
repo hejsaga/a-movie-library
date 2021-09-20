@@ -1,46 +1,62 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import CarouselArrow from "../CarouselArrow";
+import Slider from "react-slick";
 import styles from "../css/Carousel.module.css";
 
 function ActorCarousel({ actors }) {
   const history = useHistory();
   const imgPrefix = "https://image.tmdb.org/t/p/w300";
 
-  // Config for breakpoints in carousel
-  const responsive = {
-    bigScreen: {
-      breakpoint: { max: 3000, min: 2200 },
-      items: 7,
-      slidesToSlide: 7,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1800 },
-      items: 6,
-      slidesToSlide: 6,
-    },
-    laptop: {
-      breakpoint: { max: 1800, min: 1350 },
-      items: 5,
-      slidesToSlide: 5,
-    },
-    middleBreak: {
-      breakpoint: { max: 1350, min: 900 },
-      items: 3,
-      slidesToSlide: 3,
-    },
-    tablet: {
-      breakpoint: { max: 900, min: 599 },
-      items: 2,
-      slidesToSlide: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 2,
-      // Shows part of next slide, value is px
-      partialVisibilityGutter: 30,
-    },
+  // Config and breakpoints for carousel
+  var settings = {
+    dots: true,
+    autoplay: false,
+    nextArrow: <CarouselArrow />,
+
+    responsive: [
+      {
+        breakpoint: 1800,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 4,
+          infinite: true,
+          dots: false,
+          arrows: true,
+        },
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: false,
+          dots: true,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 1448,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          infinite: false,
+          dots: false,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 860,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: false,
+          dots: false,
+          arrows: false,
+          draggable: true,
+        },
+      },
+    ],
   };
 
   const goToActor = (id) => {
@@ -50,6 +66,22 @@ function ActorCarousel({ actors }) {
   return (
     <>
       {actors && (
+        <Slider {...settings}>
+          {actors.cast.map((actor, i) => {
+            return (
+              <div
+                key={i}
+                onClick={() => goToActor(actor.id)}
+                className={styles.actorCarouselContainer}
+              >
+                <img src={imgPrefix + actor.profile_path} alt="No image"></img>
+                <p className={styles.actorName}>{actor.name}</p>
+              </div>
+            );
+          })}
+        </Slider>
+      )}
+      {/* {actors && (
         <Carousel
           swipeable={true}
           showDots={false}
@@ -72,7 +104,7 @@ function ActorCarousel({ actors }) {
             );
           })}
         </Carousel>
-      )}
+      )} */}
     </>
   );
 }
