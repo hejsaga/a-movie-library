@@ -10,7 +10,6 @@ function ActorCarousel({ actors }) {
 
   // Config and breakpoints for carousel
   const settings = {
-    dots: true,
     autoplay: false,
     infinite: true,
     dots: false,
@@ -38,7 +37,7 @@ function ActorCarousel({ actors }) {
         settings: {
           slidesToShow: 4,
           slidesToScroll: 4,
-          arrows: false,
+          arrows: true,
         },
       },
       {
@@ -46,7 +45,7 @@ function ActorCarousel({ actors }) {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          arrows: false,
+          arrows: true,
         },
       },
       {

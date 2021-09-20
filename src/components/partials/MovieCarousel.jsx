@@ -14,7 +14,6 @@ function ReactCarousel({ movies }) {
 
   // Config and breakpoints for carousel
   const settings = {
-    dots: true,
     autoplay: false,
     // If not specified, 'infinite' makes a duplicate of the slider below it, displaying 2 of the same. Bug in package.
     infinite: movies.length > 5,
@@ -43,7 +42,7 @@ function ReactCarousel({ movies }) {
         settings: {
           slidesToShow: 4,
           slidesToScroll: 4,
-          arrows: false,
+          arrows: true,
         },
       },
       {
@@ -51,7 +50,7 @@ function ReactCarousel({ movies }) {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          arrows: false,
+          arrows: true,
         },
       },
       {
