@@ -1,12 +1,18 @@
 import React from "react";
 import Slider from "react-slick";
+import { useHistory } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "../css/Carousel.module.css";
 import CarouselArrow from "../CarouselArrow";
 
 function ReactCarousel({ movies }) {
+  const history = useHistory();
   const imgPrefix = "https://image.tmdb.org/t/p/w300";
+
+  const goToMovie = (id) => {
+    history.push(`/movies/${id}`);
+  };
 
   var settings = {
     dots: true,
@@ -65,7 +71,11 @@ function ReactCarousel({ movies }) {
           {movies.map((movie, i) => {
             return (
               <div key={i} className={styles.carouselContainer}>
-                <img src={imgPrefix + movie.poster_path} alt="No image"></img>
+                <img
+                  onClick={() => goToMovie(movie.id)}
+                  src={imgPrefix + movie.poster_path}
+                  alt="No image"
+                ></img>
               </div>
             );
           })}
