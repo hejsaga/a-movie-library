@@ -2,6 +2,16 @@
 .carouselContainer {
   margin-bottom: 2.5em;
 }
+.nextArrow {
+  color: white;
+  background: rgba(0, 0, 0, 0.678);
+  padding: 1em;
+  border-radius: 50%;
+}
+
+.nextArrow polygon {
+  fill: white;
+}
 
 /* rules for images */
 .carouselContainer img,
