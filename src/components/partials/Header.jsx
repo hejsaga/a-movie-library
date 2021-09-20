@@ -17,6 +17,7 @@ function Header() {
     dots: false,
     autoplay: true,
     speed: 300,
+    arrows: false,
 
     desktop: {
       breakpoint: { max: 3000, min: 1000 },
