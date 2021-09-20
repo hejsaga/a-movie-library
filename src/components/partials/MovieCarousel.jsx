@@ -20,7 +20,17 @@ function ReactCarousel({ movies }) {
 
     responsive: [
       {
-        breakpoint: 1800,
+        breakpoint: 2100,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 5,
+          infinite: true,
+          dots: false,
+          arrows: true,
+        },
+      },
+      {
+        breakpoint: 1600,
         settings: {
           slidesToShow: 5,
           slidesToScroll: 4,
@@ -30,17 +40,7 @@ function ReactCarousel({ movies }) {
         },
       },
       {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: false,
-          dots: true,
-          arrows: false,
-        },
-      },
-      {
-        breakpoint: 1448,
+        breakpoint: 1350,
         settings: {
           slidesToShow: 4,
           slidesToScroll: 4,
@@ -50,7 +50,17 @@ function ReactCarousel({ movies }) {
         },
       },
       {
-        breakpoint: 860,
+        breakpoint: 1080,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: false,
+          dots: true,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 816,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -65,7 +75,7 @@ function ReactCarousel({ movies }) {
 
   return (
     <>
-      {movies && (
+      {movies && settings && (
         <Slider {...settings}>
           {movies.map((movie, i) => {
             return (
