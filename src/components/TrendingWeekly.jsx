@@ -2,6 +2,7 @@ import React from "react";
 import { useQuery } from "react-query";
 import { getTrendingWeek } from "../services/API";
 import CarouselComponent from "./partials/CarouselComponent";
+import MovieCarousel from "./partials/MovieCarousel";
 
 function TrendingWeekly() {
   const { data, error, isError, isLoading } = useQuery(
@@ -17,7 +18,7 @@ function TrendingWeekly() {
       {isLoading && <p>Loading...</p>}
       {isError && <p>An error occured: {error.message}</p>}
 
-      {data && <CarouselComponent movies={data.results} />}
+      {data && <MovieCarousel movies={data.results} />}
     </>
   );
 }
