@@ -1,6 +1,4 @@
-import React, { useEffect } from "react";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -9,14 +7,9 @@ import styles from "../css/Carousel.module.css";
 function ReactCarousel({ movies }) {
   const imgPrefix = "https://image.tmdb.org/t/p/w300";
 
-  /* useEffect(() => {
-    console.log("Movies in carousel", movies);
-  }, [movies]); */
-
   var settings = {
     dots: true,
     autoplay: false,
-    speed: 300,
 
     responsive: [
       {
@@ -64,7 +57,7 @@ function ReactCarousel({ movies }) {
   };
 
   return (
-    <div className="marginTop">
+    <>
       {movies && (
         <Slider {...settings}>
           {movies.map((movie, i) => {
@@ -76,7 +69,7 @@ function ReactCarousel({ movies }) {
           })}
         </Slider>
       )}
-    </div>
+    </>
   );
 }
 

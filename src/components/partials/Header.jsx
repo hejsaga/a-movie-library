@@ -14,6 +14,10 @@ function Header() {
 
   // Config for breakpoints in carousel
   const settings = {
+    dots: false,
+    autoplay: true,
+    speed: 300,
+
     desktop: {
       breakpoint: { max: 3000, min: 1000 },
       items: 1,
