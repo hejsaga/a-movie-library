@@ -1,6 +1,6 @@
 import React from "react";
 import useLocalStorage from "../hooks/useLocalStorage";
-import CarouselComponent from "./partials/CarouselComponent";
+import MovieCarousel from "./partials/MovieCarousel";
 
 function LastViewed() {
   const [moviesFromStorage] = useLocalStorage("movies", []);
@@ -13,7 +13,7 @@ function LastViewed() {
       {moviesFromStorage && moviesFromStorage.length === 0 ? null : (
         <>
           <h1 className="listHeadline">Your last viewed movies</h1>
-          <CarouselComponent movies={moviesFromStorage} />
+          <MovieCarousel movies={moviesFromStorage} />
         </>
       )}
     </div>
