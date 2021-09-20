@@ -2,6 +2,7 @@ import React from "react";
 import { useQuery } from "react-query";
 import { getNowPlaying } from "../services/API";
 import CarouselComponent from "./partials/CarouselComponent";
+import MovieCarousel from "./partials/MovieCarousel";
 
 function NowPlaying() {
   const { data, error, isError, isLoading } = useQuery(["now-playing"], () => {
@@ -14,7 +15,7 @@ function NowPlaying() {
       {isLoading && <p>Loading...</p>}
       {isError && <p>An error occured: {error.message}</p>}
 
-      {data && <CarouselComponent movies={data.results} />}
+      {data && <MovieCarousel movies={data.results} />}
     </div>
   );
 }

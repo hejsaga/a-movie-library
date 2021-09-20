@@ -13,18 +13,18 @@ import { getNowPlaying } from "../services/API";
 function HomePage() {
   const isFetching = useIsFetching();
 
-  const { data, error, isError, isLoading } = useQuery(["now-playing"], () => {
+  /* const { data, error, isError, isLoading } = useQuery(["now-playing"], () => {
     return getNowPlaying();
   });
 
   useEffect(() => {
     console.log(data);
-  }, [data]);
+  }, [data]); */
 
   return (
     <div className="home">
-      {data && <MovieCarousel movies={data.results} />}
-      {/* {isFetching ? (
+      {/* {data && <MovieCarousel movies={data.results} />} */}
+      {isFetching ? (
         <Spinner />
       ) : (
         <>
@@ -34,7 +34,7 @@ function HomePage() {
           <TrendingWeekly />
           <TopRated />
         </>
-      )} */}
+      )}
     </div>
   );
 }
