@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "../css/Carousel.module.css";
+import CarouselArrow from "../CarouselArrow";
 
 function ReactCarousel({ movies }) {
   const imgPrefix = "https://image.tmdb.org/t/p/w300";
@@ -10,6 +11,7 @@ function ReactCarousel({ movies }) {
   var settings = {
     dots: true,
     autoplay: false,
+    nextArrow: <CarouselArrow />,
 
     responsive: [
       {
