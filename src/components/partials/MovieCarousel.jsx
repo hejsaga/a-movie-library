@@ -13,9 +13,11 @@ function ReactCarousel({ movies }) {
   };
 
   // Config and breakpoints for carousel
-  var settings = {
+  const settings = {
     dots: true,
     autoplay: false,
+    infinite: true,
+    dots: false,
     nextArrow: <CarouselArrow />,
 
     responsive: [
@@ -24,8 +26,6 @@ function ReactCarousel({ movies }) {
         settings: {
           slidesToShow: 6,
           slidesToScroll: 5,
-          infinite: true,
-          dots: false,
           arrows: true,
         },
       },
@@ -34,8 +34,6 @@ function ReactCarousel({ movies }) {
         settings: {
           slidesToShow: 5,
           slidesToScroll: 4,
-          infinite: true,
-          dots: false,
           arrows: true,
         },
       },
@@ -44,8 +42,6 @@ function ReactCarousel({ movies }) {
         settings: {
           slidesToShow: 4,
           slidesToScroll: 4,
-          infinite: false,
-          dots: false,
           arrows: false,
         },
       },
@@ -54,8 +50,6 @@ function ReactCarousel({ movies }) {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 1,
-          infinite: false,
-          dots: true,
           arrows: false,
         },
       },
@@ -64,8 +58,6 @@ function ReactCarousel({ movies }) {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          infinite: false,
-          dots: false,
           arrows: false,
           draggable: true,
         },

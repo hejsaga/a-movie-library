@@ -9,49 +9,51 @@ function ActorCarousel({ actors }) {
   const imgPrefix = "https://image.tmdb.org/t/p/w300";
 
   // Config and breakpoints for carousel
-  var settings = {
+  const settings = {
     dots: true,
     autoplay: false,
+    infinite: true,
+    dots: false,
     nextArrow: <CarouselArrow />,
 
     responsive: [
       {
-        breakpoint: 1800,
+        breakpoint: 2100,
         settings: {
-          slidesToShow: 5,
-          slidesToScroll: 4,
-          infinite: true,
-          dots: false,
+          slidesToShow: 6,
+          slidesToScroll: 5,
           arrows: true,
         },
       },
       {
-        breakpoint: 1200,
+        breakpoint: 1600,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: false,
-          dots: true,
-          arrows: false,
+          slidesToShow: 5,
+          slidesToScroll: 4,
+          arrows: true,
         },
       },
       {
-        breakpoint: 1448,
+        breakpoint: 1350,
         settings: {
           slidesToShow: 4,
           slidesToScroll: 4,
-          infinite: false,
-          dots: false,
           arrows: false,
         },
       },
       {
-        breakpoint: 860,
+        breakpoint: 1080,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          arrows: false,
+        },
+      },
+      {
+        breakpoint: 816,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          infinite: false,
-          dots: false,
           arrows: false,
           draggable: true,
         },
@@ -81,30 +83,6 @@ function ActorCarousel({ actors }) {
           })}
         </Slider>
       )}
-      {/* {actors && (
-        <Carousel
-          swipeable={true}
-          showDots={false}
-          responsive={responsive}
-          infinite={false}
-          partialVisible={true}
-          containerClass="carousel-container"
-          removeArrowOnDeviceType={["tablet", "mobile"]}
-        >
-          {actors.cast.map((actor, i) => {
-            return (
-              <div
-                key={i}
-                onClick={() => goToActor(actor.id)}
-                className={styles.actorCarouselContainer}
-              >
-                <img src={imgPrefix + actor.profile_path} alt="No image"></img>
-                <p className={styles.actorName}>{actor.name}</p>
-              </div>
-            );
-          })}
-        </Carousel>
-      )} */}
     </>
   );
 }
