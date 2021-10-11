@@ -1,6 +1,6 @@
 import axios from "axios";
 
-axios.defaults.baseURL = "http://api.themoviedb.org/3";
+axios.defaults.baseURL = "https://api.themoviedb.org/3";
 const apiKey = "?api_key=a0c601aa6ecbb939cd7d58617bbc8150";
 
 const get = async (endpoint) => {
@@ -67,7 +67,7 @@ export const getGenres = async (id) => {
 // Get movies from genre id
 export const getMoviesInGenre = async (id, page) => {
   return await getWithATR(
-    `/discover/movie/${apiKey}&with_genres=${id}&page=${page}`
+    `/discover/movie${apiKey}&with_genres=${id}&page=${page}`
   );
 };
 
