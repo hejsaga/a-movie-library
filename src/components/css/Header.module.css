@@ -1,8 +1,8 @@
-/* --- Styles for image is found in HeaderImage component, as inline styles --- */
-
 .backgroundImageContainer:hover {
   cursor: pointer;
 }
+
+/* --- Styles for image is found in HeaderImage component, as inline styles --- */
 
 /* title on top of header */
 .headerMovieTitle {
