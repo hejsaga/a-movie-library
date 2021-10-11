@@ -2,7 +2,7 @@ import React from "react";
 import { getActorMovies } from "../services/API";
 import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
-import CarouselComponent from "./partials/CarouselComponent";
+import MovieCarousel from "./partials/MovieCarousel";
 
 function ActorMovies() {
   const { id } = useParams();
@@ -19,7 +19,7 @@ function ActorMovies() {
       {isLoading && <p>Loading...</p>}
       {isError && <p>An error occured: {error.message}</p>}
 
-      {data && <CarouselComponent movies={data.cast} />}
+      {data && <MovieCarousel movies={data.cast} />}
     </>
   );
 }

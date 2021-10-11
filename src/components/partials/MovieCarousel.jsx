@@ -4,14 +4,19 @@ import CarouselArrow from "../CarouselArrow";
 import Slider from "react-slick";
 import styles from "../css/Carousel.module.css";
 
-function ActorCarousel({ actors }) {
+function ReactCarousel({ movies }) {
   const history = useHistory();
   const imgPrefix = "https://image.tmdb.org/t/p/w300";
+
+  const goToMovie = (id) => {
+    history.push(`/movies/${id}`);
+  };
 
   // Config and breakpoints for carousel
   const settings = {
     autoplay: false,
-    infinite: true,
+    // If not specified, 'infinite' makes a duplicate of the slider below it, displaying 2 of the same. Bug in package.
+    infinite: movies.length > 5,
     dots: false,
     nextArrow: <CarouselArrow />,
 
@@ -60,23 +65,18 @@ function ActorCarousel({ actors }) {
     ],
   };
 
-  const goToActor = (id) => {
-    history.push(`/person/${id}`);
-  };
-
   return (
     <>
-      {actors && (
+      {movies && settings && (
         <Slider {...settings}>
-          {actors.cast.map((actor, i) => {
+          {movies.map((movie, i) => {
             return (
-              <div
-                key={i}
-                onClick={() => goToActor(actor.id)}
-                className={styles.actorCarouselContainer}
-              >
-                <img src={imgPrefix + actor.profile_path} alt="No image"></img>
-                <p className={styles.actorName}>{actor.name}</p>
+              <div key={i} className={styles.carouselContainer}>
+                <img
+                  onClick={() => goToMovie(movie.id)}
+                  src={imgPrefix + movie.poster_path}
+                  alt="No image"
+                ></img>
               </div>
             );
           })}
@@ -86,4 +86,4 @@ function ActorCarousel({ actors }) {
   );
 }
 
-export default ActorCarousel;
+export default ReactCarousel;
