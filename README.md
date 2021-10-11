@@ -14,7 +14,7 @@ Main purpose of this application is to practise React Hooks, and create our own 
 
 The main goal of the application is to build a responsive movie library. The application was created from a list of strict requirements and user stories. Product owners expected a fully functional library to browse.
 
-The core functionalities were is facilitate a responsive website where users can browse categories and search for movies with paginated results.
+The core functionalities were is facilitate a website where users can browse categories and search for movies with paginated results.
 
 ### Technologies
 

@@ -5,6 +5,7 @@ import HeaderImage from "./HeaderImage";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import styles from "../css/Header.module.css";
+import Slider from "react-slick";
 
 function Header() {
   const { data, error, isError, isLoading } = useQuery(["now-playing"], () => {
@@ -12,7 +13,12 @@ function Header() {
   });
 
   // Config for breakpoints in carousel
-  const responsive = {
+  const settings = {
+    dots: false,
+    autoplay: true,
+    speed: 300,
+    arrows: false,
+
     desktop: {
       breakpoint: { max: 3000, min: 1000 },
       items: 1,
@@ -30,6 +36,22 @@ function Header() {
       {isError && <p>An error occured: {error.message}</p>}
 
       {data && (
+        <Slider {...settings}>
+          {data.results.map((movie, i) => {
+            return (
+              <div key={i}>
+                <div className={styles.headerMovieTitle}>
+                  <h1>{movie.title}</h1>
+                </div>
+
+                <HeaderImage image={movie.backdrop_path} movieId={movie.id} />
+              </div>
+            );
+          })}
+        </Slider>
+      )}
+
+      {/* {data && (
         <Carousel
           swipeable={true}
           showDots={false}
@@ -52,7 +74,7 @@ function Header() {
             );
           })}
         </Carousel>
-      )}
+      )} */}
     </>
   );
 }
