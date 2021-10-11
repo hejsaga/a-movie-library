@@ -24,7 +24,7 @@ function Routes() {
           <CategoryPage />
         </Route>
 
-        <Route path="/genres/:name/with_genres=:id">
+        <Route exact path="/genre=:name&genre_id=:id">
           <Category />
         </Route>
 
