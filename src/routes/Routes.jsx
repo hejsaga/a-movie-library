@@ -24,7 +24,7 @@ function Routes() {
           <CategoryPage />
         </Route>
 
-        <Route path="/genres/:name/:id">
+        <Route path="/genres/:name/with_genres=:id">
           <Category />
         </Route>
 

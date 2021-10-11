@@ -13,7 +13,7 @@ function Categories() {
 
   const renderCategory = (name, id) => {
     let nametoURL = name.toLowerCase();
-    history.push(`/genres/${nametoURL}/${id}`);
+    history.push(`/genres/${nametoURL}/with_genres=${id}`);
   };
 
   return (
