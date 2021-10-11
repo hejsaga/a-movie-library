@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, BrowserRouter as Router, HashRouter } from "react-router-dom";
+import { Route, BrowserRouter as Router } from "react-router-dom";
 import Media from "react-media";
 import Navbar from "./components/partials/Navbar";
 import NavbarMobile from "./components/partials/NavbarMobile";
@@ -11,7 +11,7 @@ import { QueryParamProvider } from "use-query-params";
 function App() {
   return (
     <div className="App">
-      <HashRouter>
+      <Router>
         <QueryParamProvider ReactRouterRoute={Route}>
           {/* Media causes console error „Can't perform a React state update on an unmounted component“ without me actually calling to update state. Seems to be a bug in package. Will ignore warning until for now. */}
           <Media
@@ -35,7 +35,7 @@ function App() {
 
           <Routes />
         </QueryParamProvider>
-      </HashRouter>
+      </Router>
     </div>
   );
 }
