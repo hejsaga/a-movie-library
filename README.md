@@ -19,10 +19,10 @@ React Vite ^2.5.4
 
 ### Setup
 
-To run this project, download and install it locally by using npm or yarn:
-$ npm install
+To run this project, download and install it locally by using npm or yarn: <br/>
+$ npm install<br/>
 $ npm run dev
 
 ### Live version
 
-https://vigilant-poitras-85aad0.netlify.app/
+https://fam-of-flix.netlify.app
